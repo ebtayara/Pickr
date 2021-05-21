@@ -30,6 +30,16 @@ export const login = (user) => async (dispatch) => {
     dispatch(setUser(data.user));
     return response;
 };
+//Add a thunk action that will call the GET /api/session, parse the JSON body of the response,
+//and dispatch the action for setting the session user to the user in the response's body.
+
+export const restoreUser = () => async dispatch => {
+    const response = await csrfFetch('/api/session');
+    const data = await response.json();
+    dispatch(setUser(data.user));
+    return response;
+};
+
 //define initial state
 const initialState = { user: null };
 //session reducer
