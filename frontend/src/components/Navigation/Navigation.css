@@ -1,5 +1,15 @@
-.btn {
-    display: flex;
+body {
+    height: 100%;
+    background:grey;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    /* scroll-snap-align: center; */
+    width: 100%;
+}
+
+#profile_btn {
+    /* display: flex;
     flex-direction: column;
     align-items: center;
     font-weight: bold;
@@ -8,24 +18,24 @@
     cursor: pointer;
     background-color: honeydew;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 8px; */
 
     /* width: 100%; */
 }
 
-/* .bar {
-    position: static;
+#bar {
+    /* position: static;
     top: 0;
     width: 100%;
     left: 0;
-    height: 95px;
-    background-color: #B4A0E5;
+    height: 95px; */
+    background-color: black;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 10px;
     border: 2px solid grey;
-    flex-wrap: wrap;
-} */
+    /* flex-wrap: wrap; */
+}
 
 /* .navSearchContainer {
 
@@ -33,11 +43,42 @@
 
 .navSearchBar {
     margin: auto;
-}
+} */
 
-.homeBtn {
+#home_btn {
+    text-align: left;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
     height: 40px;
     width: 40px;
     margin: auto;
     max-width: 40px;
-} */
+}
+
+#log_in_btn {
+    /* display: grid; */
+    /* display: flex; */
+    /* justify-self: right;
+    justify-content: right;
+    align-self: right;
+    align-items: right; */
+    color: white;
+    font-size: 20px;
+    /* height: 40px;
+    width: 40px;
+    margin: auto;
+    max-width: 40px; */
+}
+
+#sign_up_btn {
+    text-align: right;
+    background: white;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    margin: auto;
+    max-width: 40px;
+}
