@@ -8,6 +8,11 @@ body {
     width: 100%;
 }
 
+#nav_container {
+    /* display: flex;
+    justify-content: space-between; */
+}
+
 #profile_btn {
     /* display: flex;
     flex-direction: column;
