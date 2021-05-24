@@ -6,6 +6,7 @@ const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
 const { environment } = require('./config');
 const isProduction = environment === 'production';
+const bodyParser = require("body-parser");
 //Initialize the Express app
 const app = express();
 //import routes from routes/index.js
@@ -17,7 +18,9 @@ const { ValidationError } = require('sequelize');
 app.use(morgan('dev'));
 //Middleware for parsing cookies and JSON bodies of requests
 app.use(cookieParser());
-app.use(express.json());
+// app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // Security Middleware
 if (!isProduction) {
