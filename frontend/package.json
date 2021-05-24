@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "react-images-upload": "^1.2.8",
     "redux-logger": "^3.0.6"
   }
 }
