@@ -4,19 +4,49 @@ const SET_USER = 'session/setUser';
 const REMOVE_USER = 'session/removeUser';
 
 //action creators
-const setUser = (user) => {
-    return {
+const setUser = (user) => ({
         type: SET_USER,
         payload: user,
-    };
-};
+    });
+
 const removeUser = () => {
     return {
         type: REMOVE_USER,
     };
 };
 
-//thunk action
+//defining createUser thunk which accepts an object of key value pairs
+//and turns them into FormData entries to send with your request
+export const createUser = (user) => async (dispatch) => {
+    const { images, image, username, email, password } = user;
+    const formData = new FormData();
+    formData.append("username", username);
+    formData.append("email", email);
+    formData.append("password", password);
+
+    // for multiple files
+    if (images && images.length !== 0) {
+        for (var i = 0; i < images.length; i++) {
+            formData.append("images", images[i]);
+        }
+    }
+
+    // for single file
+    if (image) formData.append("image", image);
+
+    const res = await csrfFetch(`/api/users/`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "multipart/form-data",
+        },
+        body: formData,
+    });
+
+        const data = await res.json();
+        dispatch(setUser(data.user));
+};
+
+//login thunk action
 export const login = (user) => async (dispatch) => {
     const { credential, password } = user;
     const response = await csrfFetch('/api/session', {
