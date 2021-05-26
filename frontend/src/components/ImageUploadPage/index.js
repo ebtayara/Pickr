@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import ImageUploader from 'react-images-upload';
 import './ImageUploadPage.css';
+import {useHistory} from 'react-router-dom';
+import {useSelector} from 'react-redux';
+
 
 //get url from the server?
-const {url} = await fetch('/s3Url').then(res=>res.json())
+// const {url} = await fetch('/s3Url').then(res=>res.json())
 
 //post image directly to s3 bucket using another fetch request?
 
@@ -27,11 +30,13 @@ const Upload = props => (
 )
 
 const ImageUpload = () => {
-
     //use react hooks to wait for upload
     const [progress, setProgress] = useState('getUpload')
     const [url, setImageURL] = useState(undefined)
     const [errorMessage, setErrorMessage] = useState('')
+    //identify/redirect user
+    const sessionUser = useSelector(state => state.session.user);
+    const history = useHistory();
     //anytime url is changed in file url input, it will trigger function in getUpload case and set image url to w/e we type
     const onUrlChange = e => {
         setImageURL(e.target.value)
@@ -56,6 +61,10 @@ const ImageUpload = () => {
             setErrorMessage(error.message);
             setProgress('uploadError')
         }
+    }
+
+    if (sessionUser) {
+        history.push('/')
     }
 
     //define function invoked below. have it wait for a switch or trigger for each stage of the upload process

@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import LoginFormPage from "./components/LoginFormPage";
 import SignupFormPage from "./components/SignupFormPage";
+import ImageUploadPage from "./components/ImageUploadPage"
+// import CreateUserForm from "./components/CreateUserForm"
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 
@@ -24,6 +26,12 @@ function App() {
           <Route path="/signup">
             <SignupFormPage />
           </Route>
+          <Route path ="/upload">
+            <ImageUploadPage />
+          </Route>
+          {/* <Route path ="/user">
+            <CreateUserForm />
+          </Route> */}
         </Switch>
       )}
     </>
