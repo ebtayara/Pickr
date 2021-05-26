@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import ImageUploader from 'react-images-upload';
 import './ImageUploadPage.css';
 
+//get url from the server?
+const {url} = await fetch('/s3Url').then(res=>res.json())
+
+//post image directly to s3 bucket using another fetch request?
+
 const Upload = props => (
     <form>
         <label>
