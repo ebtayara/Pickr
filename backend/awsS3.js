@@ -1,6 +1,7 @@
 const AWS = require("aws-sdk");
 // name of your bucket here
-const pickrbucket = "aws-s3-pern-demo";
+// const pickrbucket = "aws-s3-pern-demo";
+const pickrbucket = "pickrbucket";
 
 const multer = require("multer");
 

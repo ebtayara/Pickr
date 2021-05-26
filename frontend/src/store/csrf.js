@@ -36,4 +36,4 @@ export function restoreCSRF() {
 }
 
 // module.exports.csrfFetch = csrfFetch;
-export default csrfFetch;
+// export default csrfFetch;
