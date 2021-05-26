@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createUser } from "../store/session";
+import { createUser } from "../../store/session";
 import { useDispatch, useSelector } from "react-redux";
 
 const CreateUser = () => {
