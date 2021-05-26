@@ -32,26 +32,40 @@ const validateSignup = [
 
 // Sign up
 router.post(
-    "/",
-    //should be able to access the image file in my request under the key of file - req.file
-    singleMulterUpload("image"),
-    validateSignup,
+    '/',
     asyncHandler(async (req, res) => {
-        const { email, password, username } = req.body;
-        const profileImageUrl = await singlePublicFileUpload(req.file);
-        const user = await User.signup({
-            username,
-            email,
-            password,
-            profileImageUrl,
-        });
+      const { email, password, username } = req.body;
+      const user = await User.signup({ email, username, password });
 
-        setTokenCookie(res, user);
+      await setTokenCookie(res, user);
 
-        return res.json({
-            user,
-        });
-    })
-);
+      return res.json({
+        user,
+      });
+    }),
+  );
+
+// router.post(
+//     "/",
+//     //should be able to access the image file in my request under the key of file - req.file
+//     singleMulterUpload("image"),
+//     validateSignup,
+//     asyncHandler(async (req, res) => {
+//         const { email, password, username } = req.body;
+//         const profileImageUrl = await singlePublicFileUpload(req.file);
+//         const user = await User.signup({
+//             username,
+//             email,
+//             password,
+//             profileImageUrl,
+//         });
+
+//         setTokenCookie(res, user);
+
+//         return res.json({
+//             user,
+//         });
+//     })
+// );
 
 module.exports = router;
