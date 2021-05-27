@@ -37,7 +37,9 @@ export const getPhotos = (userId) => async(dispatch) => {
 };
 //thunk that fetches from edit route using the setPhoto action
 export const editPhoto = (photoId) => async(dispatch) => {
-    const res = await csrfFetch(`/api/images/${photoId}`)
+    const res = await csrfFetch(`/api/images/${photoId}`, {
+        method: "PUT"
+    });
     const photo = await res.json();
     dispatch(setPhoto(photo));
 };

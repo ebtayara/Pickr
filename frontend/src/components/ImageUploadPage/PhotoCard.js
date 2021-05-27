@@ -4,10 +4,18 @@ import {useDispatch} from 'react-redux';
 
 const PhotoCard = ({photo, user}) => {
     const dispatch = useDispatch();
+
     const deleteButton = async() => {
         await dispatch(deletePhoto(photo.id))
         dispatch(getPhotos(user.id))
     }
+
+    // const editButton = async() => {
+    //     await dispatch(editPhoto(photo.id))
+    //     dispatch(getPhotos(user.id))
+    // }
+
+    //change onClick for edit to open the modal
 
     return (
     <div className='img_container'>
