@@ -1,22 +1,28 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {uploadImage} from '../../store/photos';
+import {uploadImage, getPhotos} from '../../store/photos';
+import PhotoCard from './PhotoCard';
 
 const ImageUpload = () => {
-  const dispatch = useDispatch();
-  const user = useSelector((state) => state.session.user);
-  const uploadedImage = useSelector((state) => state.photos);
-  const [image, setImage] = useState();
-  if (!user) return null;
-  const updateImage = (e) => {
+    const dispatch = useDispatch();
+    const user = useSelector((state) => state.session.user);
+    const photos = useSelector((state) => state.photos);
+    const [image, setImage] = useState();
+  //useEffect runs our thunk every time a user goes to/refreshes page
+    useEffect(() => {
+        dispatch(getPhotos(user.id))
+    },[dispatch])
+
+    if (!user) return null;
+    const updateImage = (e) => {
     setImage(e.target.files[0]);
-  };
-  const submitHandler = (e) => {
+};
+    const submitHandler = (e) => {
     e.preventDefault();
     dispatch(uploadImage(image, user.id));
-  };
-  console.log('poop')
-  return (
+};
+    console.log('poop')
+    return (
     <>
       <form onSubmit={submitHandler}>
         <label>Upload Image
@@ -27,7 +33,10 @@ const ImageUpload = () => {
         </label>
         <button type="submit">Upload</button>
       </form>
-      {uploadedImage && <img src={uploadedImage} alt="test" />}
+      {Object.values(photos).map(photo =>
+        <PhotoCard photo={photo}/>
+      )}
+      {/* {uploadedImage && <img src={uploadedImage} alt="test" />} */}
     </>
   );
 };

@@ -13,4 +13,10 @@ router.post('/', singleMulterUpload('image'), asyncHandler(async(req, res) => {
     return res.json(newImage);
 }));
 
+router.get('/:userId', asyncHandler(async(req, res) => {
+    // const {userId} = req.params
+    const photos = await Photo.findAll({where:{userId:req.params.userId}})
+    return res.json(photos);
+}));
+
 module.exports = router;
