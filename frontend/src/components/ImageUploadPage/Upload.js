@@ -41,7 +41,7 @@ const ImageUpload = () => {
         <button type="submit">Upload</button>
       </form>
       {Object.values(photos).map(photo =>
-        <PhotoCard photo={photo}/>
+        <PhotoCard photo={photo} user={user}/>
       )}
       {/* {uploadedImage && <img src={uploadedImage} alt="test" />} */}
     </>
