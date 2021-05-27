@@ -1,0 +1,23 @@
+.img {
+    width: 300px;
+    height: 300px;
+}
+
+.img_container {
+    /* display: flex;
+    justify-content: center; */
+    padding: 10px;
+}
+
+.edit_btn {
+    height:fit-content
+}
+
+.delete_btn {
+    height:fit-content
+}
+
+.btn_container {
+    display: flex;
+    /* align-items: flex-end; */
+}

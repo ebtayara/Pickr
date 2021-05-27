@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import {uploadImage, getPhotos} from '../../store/photos';
 import PhotoCard from './PhotoCard';
+import './Upload.css';
 
 const ImageUpload = () => {
     const dispatch = useDispatch();
