@@ -12,6 +12,8 @@ const setPhotos = (photos) =>(
     {type:GetPhotos, photos}
 );
 
+//another action for deleting the photo
+
 //thunk
 export const uploadImage = (photo, userId) => async(dispatch) => {
     const formData = new FormData();
@@ -34,6 +36,10 @@ export const getPhotos = (userId) => async(dispatch) => {
     dispatch(setPhotos(photos))
 };
 
+//thunk that fetches from edit route using the setPhoto action
+
+//thunk for delete route 
+
 //reducer
 const imagesReducer = (state = {}, action) => {
     let newState;
@@ -47,6 +53,7 @@ const imagesReducer = (state = {}, action) => {
             action.photos.forEach(photo => {
                 newState[photo.id] = photo
             });
+        //new case for delete which I set to null
             return newState;
         default:
         return state;

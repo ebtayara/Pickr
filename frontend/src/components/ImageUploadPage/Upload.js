@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import {uploadImage, getPhotos} from '../../store/photos';
 import PhotoCard from './PhotoCard';
 
@@ -8,9 +9,14 @@ const ImageUpload = () => {
     const user = useSelector((state) => state.session.user);
     const photos = useSelector((state) => state.photos);
     const [image, setImage] = useState();
+    const history = useHistory();
   //useEffect runs our thunk every time a user goes to/refreshes page
     useEffect(() => {
+        if(user) {
         dispatch(getPhotos(user.id))
+        } else {
+        history.push('/')
+        }
     },[dispatch])
 
     if (!user) return null;
