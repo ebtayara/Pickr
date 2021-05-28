@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import {uploadImage, getPhotos} from '../../store/photos';
 import PhotoCard from './PhotoCard';
+import './Edit.css';
 
 const Edit = () => {
     const dispatch = useDispatch();
@@ -54,13 +55,16 @@ const Edit = () => {
     return (
     <>
       <form onSubmit={submitHandler}>
-        <label>Upload Image
+        <label className="choose_file">You have plenty of options
             <input
             type="file"
             onChange={updateImage}
             />
         </label>
-        <button type="submit">Upload</button>
+        <button type="submit">Upload a MORE AWESOME pic</button>
+        <h1 className="title">
+            Wrong Angle? No worries :)
+        </h1>
       </form>
       {Object.values(photos).map(photo =>
         <PhotoCard photo={photo} user={user}/>

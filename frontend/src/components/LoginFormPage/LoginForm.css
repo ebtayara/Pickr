@@ -1,0 +1,21 @@
+.login_title {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.user {
+    color: burlywood
+}
+
+.password {
+    color: burlywood
+}
+
+.log_in {
+    color: burlywood
+}
+
+.form {
+    
+}

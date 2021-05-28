@@ -44,13 +44,16 @@ const ImageUpload = () => {
     return (
     <>
       <form onSubmit={submitHandler}>
-        <label>Upload Image
+        <label className ="upload">Upload Image
             <input
             type="file"
             onChange={updateImage}
             />
         </label>
         <button type="submit">Upload</button>
+        <h1 className="title">
+            Show us Whatchu Got!
+        </h1>
       </form>
       {Object.values(photos).map(photo =>
         <PhotoCard photo={photo} user={user} newList={newList}/>

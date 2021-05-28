@@ -27,11 +27,11 @@ function LoginFormPage() {
     }
 
     return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form">
         <ul>
             {errors.map((error, idx) => <li key={idx}>{error}</li>)}
         </ul>
-        <label>
+        <label className="user">
             Username or Email
             <input
                 type="text"
@@ -40,7 +40,7 @@ function LoginFormPage() {
                 required
             />
         </label>
-        <label>
+        <label className="password">
             Password
             <input
                 type="password"
@@ -50,6 +50,11 @@ function LoginFormPage() {
             />
         </label>
         <button type="submit">Log In</button>
+        <div className="login_title">
+            <h1>
+                You have an awesome pet you want to show off??!
+            </h1>
+        </div>
     </form>
     );
 }

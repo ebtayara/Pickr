@@ -19,36 +19,36 @@ const PhotoCard = ({photo, user, newList}) => {
         let path = `/edit/${photo.id}`
         history.push(path)
     };
-    //change onClick for edit to open the modal?
-return (
-    <div className="cardContainer">
-    {newList.map((photo) => (
-        <div>
-        <NavLink to={`/photos/${photo.id}`}>
-          <div className="card"
-            style={{
-              backgroundImage: `url("${photo.image_url}")`,
-            }}
-          ></div>
-        </NavLink>
-        <div className='btn_container'>
-            <button className='edit_btn' onClick={e => editButton(photo.id)} type="submit">Edit</button>
-            <button className='delete_btn' onClick={deleteButton} type="submit">Delete</button>
-        </div>
-        </div>
-      ))}
-    </div>
-    )
 
-//     return (
-//     <div className='img_container'>
-//         <img className='img' src={photo.image_url}></img>
+// return (
+//     <div className="cardContainer">
+//     {newList.map((photo) => (
+//         <div>
+//         <NavLink to={`/photos/${photo.id}`}>
+//           <div className="card"
+//             style={{
+//               backgroundImage: `url("${photo.image_url}")`,
+//             }}
+//           ></div>
+//         </NavLink>
 //         <div className='btn_container'>
-//             <button className='edit_btn' onClick={e => editButton()} type="submit">Edit</button>
+//             <button className='edit_btn' onClick={e => editButton(photo.id)} type="submit">Edit</button>
 //             <button className='delete_btn' onClick={deleteButton} type="submit">Delete</button>
 //         </div>
+//         </div>
+//       ))}
 //     </div>
 //     )
+
+    return (
+    <div className='img_container'>
+        <img className='img' src={photo.image_url}></img>
+        <div className='btn_container'>
+            <button className='edit_btn' onClick={editButton} type="submit">Edit</button>
+            <button className='delete_btn' onClick={deleteButton} type="submit">Delete</button>
+        </div>
+    </div>
+    )
 };
 
 export default PhotoCard;
