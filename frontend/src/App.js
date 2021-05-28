@@ -5,6 +5,7 @@ import LoginFormPage from "./components/LoginFormPage";
 import SignupFormPage from "./components/SignupFormPage";
 // import ImageUploadPage from "./components/ImageUploadPage"
 import Upload from "./components/ImageUploadPage/Upload";
+import Edit from "./components/ImageUploadPage/Edit";
 // import CreateUserForm from "./components/CreateUserForm"
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
@@ -29,6 +30,9 @@ function App() {
           </Route>
           <Route path ="/upload">
             <Upload />
+          </Route>
+          <Route path ="/edit">
+            <Edit />
           </Route>
           {/* <Route path ="/user">
             <CreateUserForm />

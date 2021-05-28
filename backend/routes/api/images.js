@@ -22,13 +22,13 @@ router.get('/:userId', asyncHandler(async(req, res) => {
 router.delete('/:photoId', asyncHandler(async(req, res) => {
     const {photoId} = req.params
     const photo = await Photo.findByPk(photoId)
-    photo.destroy()
+    await photo.destroy()
     const photos = await Photo.findAll()
     return photos;
 }));
 
 router.put('/:photoId', asyncHandler(async(req, res) => {
-    const {photoId} = req.params.id
+    const {photoId} = req.params
     const photo = await Photo.findByPk(photoId)
     photo.image_url = newImage
     photo.save();
