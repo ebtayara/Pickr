@@ -53,6 +53,7 @@
 
 #nav_flex_container {
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -81,4 +82,11 @@
     width: 40px;
     margin: auto;
     max-width: 40px;
+}
+
+.upload_btn {
+    display:flex;
+    justify-content:center;
+    align-self:center;
+    align-items:center
 }

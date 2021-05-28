@@ -12,11 +12,13 @@ function Navigation({ isLoaded }){
     if (sessionUser) {
         sessionLinks = (
     <>
-        <div>
-            <ProfileButton id="profile_btn" user={sessionUser} />
-        </div>
+    <div className="upload_btn">
         <div>
             <NavLink to="/upload">Upload</NavLink>
+        </div>
+    </div>
+        <div>
+            <ProfileButton id="profile_btn" user={sessionUser} />
         </div>
     </>
         );
