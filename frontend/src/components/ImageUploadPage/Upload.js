@@ -20,6 +20,17 @@ const ImageUpload = () => {
         }
     },[dispatch])
 
+    const list = useSelector((state) => {
+        // console.log(state);
+        return state.photos
+    })
+
+    const newList = []
+    for (let key in list) {
+        newList.push(list[key])
+    }
+    // console.log(newList);
+
     if (!user) return null;
     const updateImage = (e) => {
     setImage(e.target.files[0]);
@@ -28,7 +39,8 @@ const ImageUpload = () => {
     e.preventDefault();
     dispatch(uploadImage(image, user.id));
 };
-    console.log('poop')
+    // console.log('poop')
+
     return (
     <>
       <form onSubmit={submitHandler}>
@@ -41,7 +53,7 @@ const ImageUpload = () => {
         <button type="submit">Upload</button>
       </form>
       {Object.values(photos).map(photo =>
-        <PhotoCard photo={photo} user={user}/>
+        <PhotoCard photo={photo} user={user} newList={newList}/>
       )}
       {/* {uploadedImage && <img src={uploadedImage} alt="test" />} */}
     </>
