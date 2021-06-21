@@ -9,6 +9,7 @@ import Edit from "./components/ImageUploadPage/Edit";
 // import CreateUserForm from "./components/CreateUserForm"
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
+// import GitHubPage from "./components/GitHubPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -34,6 +35,9 @@ function App() {
           <Route path ="/edit">
             <Edit />
           </Route>
+          {/* <Route path ="/github">
+            <GitHubPage />
+          </Route> */}
           {/* <Route path ="/user">
             <CreateUserForm />
           </Route> */}

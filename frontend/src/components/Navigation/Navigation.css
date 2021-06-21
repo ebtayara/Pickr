@@ -109,6 +109,10 @@
 #navFooterContainer {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+}
+
+#github_link {
+    padding: 5px;
 }

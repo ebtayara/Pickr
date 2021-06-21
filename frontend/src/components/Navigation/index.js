@@ -43,7 +43,8 @@ function Navigation({ isLoaded }){
         </div>
     <div id="footer">
         <div id="navFooterContainer">
-        Developed by Ebrahim Tayara
+        Developed by
+        <NavLink to="/github" id="github_link">Ebrahim Tayara</NavLink>
         </div>
     </div>
     </div>
