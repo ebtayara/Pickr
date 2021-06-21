@@ -41,6 +41,11 @@ function Navigation({ isLoaded }){
                 {isLoaded && sessionLinks}
             </div>
         </div>
+    <div id="footer">
+        <div id="navFooterContainer">
+        Developed by Ebrahim Tayara
+        </div>
+    </div>
     </div>
     );
 }

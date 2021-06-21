@@ -90,3 +90,23 @@
     align-self:center;
     align-items:center
 }
+
+
+#footer {
+    /* display: flex; */
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    background-color: #A7c957;
+    color: #bc4249;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #bc4249;
+}
+
+#navFooterContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
