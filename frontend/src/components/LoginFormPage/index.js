@@ -50,10 +50,12 @@ function LoginFormPage() {
             />
         </label>
         <button type="submit">Log In</button>
-        <div className="login_title">
-            <h1>
+        <div>
+            <div className="login_title">
+                <h1>
                 You have an awesome pet you want to show off??!
-            </h1>
+                </h1>
+            </div>
         </div>
     </form>
     );

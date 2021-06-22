@@ -2,6 +2,12 @@
     color: white;
     display: flex;
     justify-content: center;
+    display: inline-block;
+    justify-content: space-between;
+    /* width: 100%; */
+    background-color: rgba(0, 128, 0, .2);
+    padding: 10px;
+    border: 2px solid black;
 }
 
 .user {
@@ -17,5 +23,5 @@
 }
 
 .form {
-    
+
 }
