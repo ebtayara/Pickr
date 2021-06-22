@@ -38,17 +38,19 @@ export const getPhotos = (userId) => async(dispatch) => {
     dispatch(setPhotos(photos))
 };
 //thunk that fetches from edit route using the setPhoto action
-export const editPhoto = (photoId) => async(dispatch) => {
+export const editPhoto = (photo, photoId) => async(dispatch) => {
+    const formData = new FormData();
+    formData.append("image", photo);
     const res = await csrfFetch(`/api/images/${photoId}`, {
         method: "PUT",
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'multipart/form-data'
         },
-        body: JSON.stringify(photoId)
+        body: formData,
     });
     if (res.ok) {
-    const photo = await res.json();
-    dispatch(setPhoto(photo));
+    const image = await res.json();
+    dispatch(setPhoto(image));
     }
 };
 //thunk for delete route
