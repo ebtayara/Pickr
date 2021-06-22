@@ -51,9 +51,13 @@ const ImageUpload = () => {
             />
         </label>
         <button type="submit">Upload</button>
-        <h1 className="title">
-            Show us Whatchu Got!
-        </h1>
+        <div>
+          <div className = "title_container">
+            <h1 className="title">
+                Show us Whatchu Got!
+            </h1>
+          </div>
+        </div>
       </form>
       {Object.values(photos).map(photo =>
         <PhotoCard photo={photo} user={user} newList={newList}/>
