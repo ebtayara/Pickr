@@ -20,11 +20,11 @@ export const uploadImage = (photo, userId) => async(dispatch) => {
     formData.append("image", photo);
     formData.append("userId", userId);
     const res = await csrfFetch('/api/images', {
-      method: "POST",
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-      body: formData,
+        method: "POST",
+        headers: {
+            "Content-Type": "multipart/form-data",
+        },
+        body: formData,
     });
     const image = await res.json();
     dispatch(setPhoto(image));
