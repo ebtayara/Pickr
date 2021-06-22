@@ -5,3 +5,15 @@
 .choose_file {
     color: burlywood;
 }
+
+.title_container {
+    color: white;
+    display: flex;
+    justify-content: center;
+    display: inline-block;
+    justify-content: space-between;
+    background-color: rgba(0, 128, 0, .2);
+    padding: 10px;
+    border: 2px solid black;
+    margin: 10px;
+}

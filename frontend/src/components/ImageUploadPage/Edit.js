@@ -62,9 +62,13 @@ const Edit = () => {
             />
         </label>
         <button type="submit">Upload a MORE AWESOME pic</button>
-        <h1 className="title">
-            Wrong Angle? No worries :)
-        </h1>
+        <div>
+          <div className="title_container">
+            <h1 className="title">
+                Wrong Angle? No worries :)
+            </h1>
+          </div>
+        </div>
       </form>
       {Object.values(photos).map(photo =>
         <PhotoCard photo={photo} user={user}/>
