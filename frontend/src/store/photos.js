@@ -73,7 +73,7 @@ const imagesReducer = (state = {}, action) => {
             newState[action.photo.id] = action.photo;
             return newState;
         case GetPhotos:
-            newState = {...state};
+            newState = {};
             action.photos.forEach(photo => {
                 newState[photo.id] = photo
             });

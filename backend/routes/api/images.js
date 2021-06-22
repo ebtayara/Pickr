@@ -24,7 +24,7 @@ router.delete('/:photoId', asyncHandler(async(req, res) => {
     const photo = await Photo.findByPk(photoId)
     await photo.destroy()
     const photos = await Photo.findAll()
-    return photos;
+    return res.json(photos);
 }));
 
 router.put('/:photoId', singleMulterUpload('image'), asyncHandler(async(req, res) => {
