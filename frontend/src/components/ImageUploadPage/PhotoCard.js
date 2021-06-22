@@ -12,9 +12,9 @@ const PhotoCard = ({photo, user}) => {
         history.push(path)
     };
 
-    const deleteButton = async(e) => {
+    const deleteButton = (e) => {
         e.preventDefault()
-        await dispatch(deletePhoto(photo.id))
+        dispatch(deletePhoto(photo.id))
         dispatch(getPhotos(user.id))
         history.push('/upload')
     };

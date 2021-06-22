@@ -11,14 +11,14 @@ const ImageUpload = () => {
     const photos = useSelector((state) => state.photos);
     const [image, setImage] = useState();
     const history = useHistory();
-  //useEffect runs our thunk every time a user goes to/refreshes page
+  //useEffect runs our thunk every time a user goes to refresh page
     useEffect(() => {
         if(user) {
         dispatch(getPhotos(user.id))
         } else {
         history.push('/')
         }
-    },[dispatch])
+    },[user, dispatch, history])
 
     const list = useSelector((state) => {
         // console.log(state);

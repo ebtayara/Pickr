@@ -14,14 +14,14 @@ const Edit = () => {
     const history = useHistory();
     const singlePhoto = photos.find((photo) => +photoId === photo.id);
   // console.log('single', singlePhoto);
-  //useEffect runs our thunk every time a user goes to/refreshes page
+  //useEffect runs our thunk every time a user goes to refresh page
     useEffect(() => {
         if(user) {
         dispatch(getPhotos(user.id))
         } else {
         history.push('/')
         }
-    },[dispatch, history, user])
+    },[user, dispatch, history])
 
     const list = useSelector((state) => {
         // console.log(state);
@@ -35,13 +35,13 @@ const Edit = () => {
     // console.log(newList);
 
     if (!user) return null;
-    const editImage = async(e) => {
-      await dispatch(editPhoto(photoId))
+    const editImage = (e) => {
       setImage(e.target.files[0]);
   };
       const submitHandler = (e) => {
       e.preventDefault();
-      dispatch(editImage(photoId));
+      dispatch(editPhoto(image, photoId));
+      history.push('/upload')
   };
     // console.log('poop')
 
