@@ -9,7 +9,7 @@ import Edit from "./components/ImageUploadPage/Edit";
 // import CreateUserForm from "./components/CreateUserForm"
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
-// import GitHubPage from "./components/GitHubPage";
+// import HomePage from "./components/HomePage";
 
 function App() {
   const dispatch = useDispatch();
@@ -23,6 +23,9 @@ function App() {
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
+          {/* <Route path="/">
+            <HomePage />
+          </Route> */}
           <Route path="/login">
             <LoginFormPage />
           </Route>
@@ -32,7 +35,7 @@ function App() {
           <Route path ="/upload">
             <Upload />
           </Route>
-          <Route path ="/edit">
+          <Route path ="/edit/:photoId">
             <Edit />
           </Route>
           {/* <Route path ="/github">

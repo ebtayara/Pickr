@@ -1,0 +1,20 @@
+#footer {
+  /* display: flex; */
+  height: 30px;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, .3);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid grey;
+}
+
+#navFooterContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

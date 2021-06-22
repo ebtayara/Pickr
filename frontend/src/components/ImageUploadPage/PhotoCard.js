@@ -5,7 +5,6 @@ import {useHistory} from 'react-router-dom';
 
 const PhotoCard = ({photo, user}) => {
     const dispatch = useDispatch();
-
     const history = useHistory();
 
     const editButton = async() => {
@@ -17,12 +16,12 @@ const PhotoCard = ({photo, user}) => {
         e.preventDefault()
         await dispatch(deletePhoto(photo.id))
         dispatch(getPhotos(user.id))
-        history.push('/')
-    }
+        history.push('/upload')
+    };
 
     return (
     <div className='img_container'>
-        <img className='img' src={photo.image_url}></img>
+        <img className='img' src={photo?.image_url}></img>
         <div className='btn_container'>
             <button className='edit_btn' onClick={editButton} type="submit">Edit</button>
             <button className='delete_btn' onClick={deleteButton} type="submit">Delete</button>

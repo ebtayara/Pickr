@@ -42,7 +42,7 @@ const ImageUpload = () => {
     // console.log('poop')
 
     return (
-    <>
+    <div className="wrapper">
       <form onSubmit={submitHandler}>
         <label className ="upload">Upload Image
             <input
@@ -63,7 +63,7 @@ const ImageUpload = () => {
         <PhotoCard photo={photo} user={user} newList={newList}/>
       )}
       {/* {uploadedImage && <img src={uploadedImage} alt="test" />} */}
-    </>
+    </div>
   );
 };
 export default ImageUpload;

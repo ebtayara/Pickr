@@ -27,11 +27,12 @@ router.delete('/:photoId', asyncHandler(async(req, res) => {
     return photos;
 }));
 
-router.put('/:photoId', asyncHandler(async(req, res) => {
+router.put('/:photoId', singleMulterUpload('image'), asyncHandler(async(req, res) => {
     const {photoId} = req.params
+    const image_url = await singlePublicFileUpload(req.file)
     const photo = await Photo.findByPk(photoId)
-    photo.image_url = newImage
-    photo.save();
+    photo.image_url = image_url
+    await photo.save();
     return res.json(photo);
 }));
 
