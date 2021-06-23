@@ -1,10 +1,12 @@
 import { csrfFetch } from './csrf'
 
+//actions
 const LoadComments = 'photos/LoadComments'
 const AddComment = 'photos/AddComment'
 const UpdateComment = 'photos/UpdateComment'
 const DeleteComment = 'photos/DeleteComment'
 
+//action creators
 const loadComments = (comments) => (
   {type: LoadComments, comments}
 );
@@ -21,6 +23,7 @@ const deleteComment = (comment) => (
   {type: DeleteComment, comment}
 );
 
+//thunks
 export const getComments = (photoId) => async (dispatch) => {
   const res = await csrfFetch(`/api/comments/photos/${photoId}`)
   if (res.ok) {
@@ -65,3 +68,17 @@ export const removeComment = (commentId) => async (dispatch) => {
       dispatch(deleteComment(commentId))
   }
 };
+
+//reducer
+const commentsReducer = (state = {}, action) => {
+  let newState;
+  switch (action.type) {
+      case LoadComments: {
+          newState = {}
+          action.comments.forEach(comment => {
+              newState[comment.id] = comment
+          })
+          return newState
+      
+
+export default commentsReducer;
