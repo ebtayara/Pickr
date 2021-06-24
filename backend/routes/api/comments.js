@@ -5,7 +5,8 @@ const { User, Comment } = require('../../db/models');
 const router = express.Router();
 
 router.post('/:photoId)', requireAuth, asyncHandler(async (req, res) => {
-  const {photoId} = parsInt(req.params, 10)
+  const {photoId} = req.params
+  // const photoId = parsInt(req.params.id, 10)
   const {body, userId} = req.body
   const newComment = await Comment.create({
       body,
@@ -19,7 +20,7 @@ router.post('/:photoId)', requireAuth, asyncHandler(async (req, res) => {
 }));
 
 router.get('/:photoId', asyncHandler(async (req, res) => {
-  const {photoId} = parsInt(req.params, 10)
+  const {photoId} = req.params
   const comments = await Comment.findAll({
       where: {photoId},
       include: User
