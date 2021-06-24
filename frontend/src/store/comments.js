@@ -81,6 +81,8 @@ const commentsReducer = (state = {}, action) => {
           newState.comments2 = [...action.comments]
           return newState
         }
+        // if you are going to block scope in your reducer you need to
+        //add a newState object to the addComment block
         case AddComment: {
             newState[action.comment.id] = action.comment
             return newState
