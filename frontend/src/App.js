@@ -10,6 +10,7 @@ import Edit from "./components/ImageUploadPage/Edit";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 // import HomePage from "./components/HomePage";
+import Comments from "./components/ImageUploadPage/Comments";
 
 function App() {
   const dispatch = useDispatch();
@@ -37,6 +38,9 @@ function App() {
           </Route>
           <Route path ="/edit/:photoId">
             <Edit />
+          </Route>
+          <Route path ="/comment/:photoId">
+            <Comments />
           </Route>
           {/* <Route path ="/github">
             <GitHubPage />
