@@ -25,7 +25,7 @@ const deleteComment = (comment) => (
 
 //thunks
 export const getComments = (photoId) => async (dispatch) => {
-  const res = await csrfFetch(`/api/comments/photos/${photoId}`)
+  const res = await csrfFetch(`/api/comments/${photoId}`)
   if (res.ok) {
       const comments = await res.json()
       dispatch(loadComments(comments))
@@ -33,7 +33,7 @@ export const getComments = (photoId) => async (dispatch) => {
 };
 
 export const editComment = (textfield, commentId) => async (dispatch) => {
-  const res = await csrfFetch(`/api/comments/photos/${commentId}`, {
+  const res = await csrfFetch(`/api/comments/${commentId}`, {
       method: 'PUT',
       headers: {
           'Content-Type': 'application/json'
@@ -47,7 +47,7 @@ export const editComment = (textfield, commentId) => async (dispatch) => {
 };
 
 export const createComment = (comment) => async (dispatch) => {
-  const res = await csrfFetch(`/api/comments/photos/${comment.photoId}`, {
+  const res = await csrfFetch(`/api/comments/${comment.photoId}`, {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'
