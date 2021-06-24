@@ -5,10 +5,10 @@ const { User, Comment } = require('../../db/models');
 const router = express.Router();
 
 router.post('/:photoId)', requireAuth, asyncHandler(async (req, res) => {
-  const {photoId} = req.params
-  const {textfield, userId} = req.body
+  const {photoId} = parsInt(req.params, 10)
+  const {body, userId} = req.body
   const newComment = await Comment.create({
-      textfield,
+      body,
       userId,
       photoId,
   })
@@ -19,7 +19,7 @@ router.post('/:photoId)', requireAuth, asyncHandler(async (req, res) => {
 }));
 
 router.get('/:photoId', asyncHandler(async (req, res) => {
-  const {photoId} = req.params
+  const {photoId} = parsInt(req.params, 10)
   const comments = await Comment.findAll({
       where: {photoId},
       include: User
@@ -29,9 +29,9 @@ router.get('/:photoId', asyncHandler(async (req, res) => {
 
 router.put('/:photoId)', requireAuth, asyncHandler(async (req, res) => {
   const {photoId} = req.params
-  const {textfield} = req.body
+  const {body} = req.body
   const comment = await Comment.findOne({where: {id: photoId}})
-  await comment.update({textfield})
+  await comment.update({body})
   return res.json(comment)
 }));
 
@@ -40,3 +40,5 @@ router.delete('/:userId)', requireAuth, asyncHandler(async (req, res) => {
   const comment = await Comment.findByPk(commentId)
   await comment.destroy()
 }));
+
+module.exports = router;

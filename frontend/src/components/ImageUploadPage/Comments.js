@@ -25,7 +25,7 @@ function Comments() {
     const userComment = async (e) => {
         e.preventDefault()
         dispatch(createComment({
-            textfield: newComment,
+            body: newComment,
             userId: user.id,
             photoId
         }))
@@ -54,9 +54,18 @@ function Comments() {
 
     if (!user) history.push('/');
 
+    // if (!comments) {
+    //     return (
+    //         <div>
+    //             <h1>No Comments!</h1>
+    //         </div>
+    //     )
+    // };
+
 return (
     <div>
-        {Object.values(comments).map(comment => {
+        {comments &&
+        Object.values(comments)?.map(comment => {
             return (
                 <div key={comment.id} className='commentsContainer'>
                     <div>
@@ -65,7 +74,7 @@ return (
                             <p>{comment.body}</p>
                             {user.id === comment.userId && (
                                 <div>
-                                    <button onClick={() => openForm(comment)} >Edit Comment</button>
+                                    <button onClick={() => openForm(comment)}>Edit Comment</button>
                                     {showForm && comment.id === formId ?
                                         <form onSubmit={(e) => updateComment(comment.id, body, e)} key={comment.id}>
                                             <input type="text" value={body} onChange={(e) => setBody(e.target.value)} />
