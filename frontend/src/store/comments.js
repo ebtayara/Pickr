@@ -33,7 +33,7 @@ export const getComments = (photoId) => async (dispatch) => {
 };
 
 export const editComment = (textfield, commentId) => async (dispatch) => {
-  const response = await csrfFetch(`/api/comments/photos/${commentId}`, {
+  const res = await csrfFetch(`/api/comments/photos/${commentId}`, {
       method: 'PUT',
       headers: {
           'Content-Type': 'application/json'
