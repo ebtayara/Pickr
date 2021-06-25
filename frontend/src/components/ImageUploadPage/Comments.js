@@ -39,10 +39,12 @@ function Comments() {
         setShowForm(false)
     };
 
-    const deleteComment = (photoId) => {
+    const deleteComment = (commentId) => {
         let alert = window.confirm('Are you sure you want to delete?')
         if (alert) {
-            dispatch(removeComment(photoId))
+            dispatch(removeComment(commentId))
+            // console.log('DELETE THUNK', commentId)
+            history.push('/comment')
         }
     };
 

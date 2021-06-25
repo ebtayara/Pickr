@@ -40,10 +40,13 @@ router.put('/:photoId', requireAuth, asyncHandler(async (req, res) => {
   return res.json(comment)
 }));
 
-router.delete('/:userId', requireAuth, asyncHandler(async (req, res) => {
+router.delete('/:commentId', requireAuth, asyncHandler(async (req, res) => {
   // const {commentId} = req.params
+  // console.log('PARAMS', req.params)
   const commentId = parseInt(req.params.commentId, 10)
+  // console.log('******', commentId)
   const comment = await Comment.findByPk(commentId)
+  // console.log('*******', comment)
   await comment.destroy()
   // const comments = await Comment.findAll()
   // return res.json(comments)
