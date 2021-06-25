@@ -77,8 +77,8 @@ const commentsReducer = (state = {}, action) => {
           newState = {}
           action.comments.forEach(comment => {
               newState[comment.id] = comment
-          })
-          newState.comments2 = [...action.comments]
+          });
+          // newState.comments2 = [...action.comments]
           return newState
         }
         case AddComment: {
@@ -91,13 +91,13 @@ const commentsReducer = (state = {}, action) => {
             newState[action.comment.id] = action.comment
             return newState
         }
-        case DeleteComment: {
-            delete newState[action.comment]
-            return newState
-        }
+        // case DeleteComment: {
+        //     delete newState[action.comment]
+        //     return newState
+        // }
         default:
             return state
     }
-  }
+  };
 
 export default commentsReducer;

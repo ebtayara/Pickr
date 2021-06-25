@@ -44,7 +44,7 @@ function Comments() {
         if (alert) {
             dispatch(removeComment(commentId))
             // console.log('DELETE THUNK', commentId)
-            history.push('/comment')
+            history.push(`/comment/${photoId}`)
         }
     };
 

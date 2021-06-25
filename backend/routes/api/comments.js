@@ -48,8 +48,8 @@ router.delete('/:commentId', requireAuth, asyncHandler(async (req, res) => {
   const comment = await Comment.findByPk(commentId)
   // console.log('*******', comment)
   await comment.destroy()
-  // const comments = await Comment.findAll()
-  // return res.json(comments)
+  const comments = await Comment.findAll()
+  return res.json(comments)
 }));
 
 module.exports = router;
