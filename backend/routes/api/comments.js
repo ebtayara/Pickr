@@ -7,9 +7,9 @@ const router = express.Router();
 router.post('/:photoId', requireAuth, asyncHandler(async (req, res) => {
   // const {photoId} = req.params
   const photoId = parseInt(req.params.photoId, 10)
-  console.log('************', req.body)
+  // console.log('************', req.body)
   const {textfield, userId} = req.body
-  console.log('--------', textfield)
+  // console.log('--------', textfield)
   const newComment = await Comment.create({
       textfield,
       userId,

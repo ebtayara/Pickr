@@ -1,6 +1,6 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
-const { Photo } = require('../../db/models');
+const { Photo, Comment } = require('../../db/models');
 const router = express.Router();
 const {singleMulterUpload, singlePublicFileUpload } = require('../../awsS3');
 
@@ -15,7 +15,9 @@ router.post('/', singleMulterUpload('image'), asyncHandler(async(req, res) => {
 
 router.get('/:userId', asyncHandler(async(req, res) => {
     // const {userId} = req.params
-    const photos = await Photo.findAll({where:{userId:req.params.userId}})
+    const photos = await Photo.findAll({where:{userId:req.params.userId},
+        include: Comment
+    })
     return res.json(photos);
 }));
 

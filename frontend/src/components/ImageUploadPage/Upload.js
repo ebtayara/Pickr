@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import {uploadImage, getPhotos} from '../../store/photos';
 import PhotoCard from './PhotoCard';
+import Comments from './Comments';
 import './Upload.css';
 
 const ImageUpload = () => {
@@ -60,8 +61,13 @@ const ImageUpload = () => {
         </div>
       </form>
       {Object.values(photos).map(photo =>
-        <PhotoCard photo={photo} user={user} newList={newList}/>
-      )}
+        <PhotoCard photo={photo} user={user} newList={newList} Comments={Comments}/>
+        )}
+        {/* <PhotoCard photo={photo} user={user} newList={newList} Comments={Comments.map(comment => {
+          <div>
+            textfield={comment.textfield}
+          </div> */}
+        {/* <Comments/> */}
       {/* {uploadedImage && <img src={uploadedImage} alt="test" />} */}
     </div>
   );
