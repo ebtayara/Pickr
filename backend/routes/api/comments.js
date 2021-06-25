@@ -45,6 +45,8 @@ router.delete('/:userId', requireAuth, asyncHandler(async (req, res) => {
   const commentId = parseInt(req.params.commentId, 10)
   const comment = await Comment.findByPk(commentId)
   await comment.destroy()
+  // const comments = await Comment.findAll()
+  // return res.json(comments)
 }));
 
 module.exports = router;
