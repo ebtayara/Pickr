@@ -10,11 +10,24 @@
 }
 
 .edit_btn {
-    height:fit-content
+    background-color: rgba(0,0,0,.5);
+    color: white;
+    font-weight: bold;
+    margin-bottom: 1px;
 }
 
 .delete_btn {
-    height:fit-content
+    background-color: rgba(0,0,0,.5);
+    color: white;
+    font-weight: bold;
+    margin-bottom: 1px;
+}
+
+.comment_btn {
+    background-color: rgba(0,0,0,.5);
+    color: white;
+    font-weight: bold;
+    margin-bottom: 1px;
 }
 
 .btn_container {
@@ -28,12 +41,12 @@
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas:
-      "genre-1 genre-2 genre-3 genre-4"
-      "genre-5 genre-6 genre-7 genre-8"
-      "genre-9 genre-10 genre-11 genre-12"
-      "genre-13 genre-14 genre-15 genre-16";
-  }
-  .card {
+    "genre-1 genre-2 genre-3 genre-4"
+    "genre-5 genre-6 genre-7 genre-8"
+    "genre-9 genre-10 genre-11 genre-12"
+    "genre-13 genre-14 genre-15 genre-16";
+}
+.card {
     -webkit-text-stroke-color: var(--accent2);
     -webkit-text-stroke-width: 1px;
     color: var(--text-color);
@@ -52,4 +65,4 @@
     margin: 10px 10px;
     transition: opacity 0.25s ease-in-out;
     cursor: pointer;
-  }
+}

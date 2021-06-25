@@ -1,7 +1,39 @@
 .commentsContainer {
   background-color: #f3f5f6;
+  margin: 10px;
+  width: 18%;
 }
 
 textArea {
   resize: none;
+  margin: 10px;
+}
+
+.editButton {
+  background-color: rgba(0,0,0,.7);
+  color: white;
+  font-weight: bold;
+  margin-bottom: 1px;
+}
+
+.editButtonContainer {
+  
+}
+
+.submitButton {
+  background-color: rgba(0,0,0,.5);
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin: 10px;
+}
+
+.editComment {
+  background-color: burlywood;
+  font-size: 13px;
+}
+
+.deleteComment {
+  background-color: burlywood;
+  font-size: 13px;
 }

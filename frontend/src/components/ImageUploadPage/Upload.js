@@ -46,12 +46,12 @@ const ImageUpload = () => {
     <div className="wrapper">
       <form onSubmit={submitHandler}>
         <label className ="upload">Upload Image
-            <input
+            <input className = "fileUploadBtn"
             type="file"
             onChange={updateImage}
             />
         </label>
-        <button type="submit">Upload</button>
+        <button className="uploadBtn" type="submit">Upload</button>
         <div>
           <div className = "title_container">
             <h1 className="title">

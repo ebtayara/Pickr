@@ -76,12 +76,14 @@ return (
                             <p>{comment.textfield}</p>
                             {user.id === comment.userId && (
                                 <div>
-                                    <button onClick={() => openForm(comment)}>Edit Comment</button>
+                                    <div className='editButtonContainer'>
+                                    <button className='editButton' onClick={() => openForm(comment)}>Edit Comment</button>
+                                    </div>
                                     {showForm && comment.id === formId ?
                                         <form onSubmit={(e) => updateComment(comment.id, textfield, e)} key={comment.id}>
                                             <input type="text" value={textfield} onChange={(e) => setBody(e.target.value)} />
-                                            <button type='submit' onSubmit={(e) => updateComment(comment.id, textfield, e)}></button>
-                                            <button onClick={() => deleteComment(comment.id)}></button>
+                                            <button className='editComment' type='submit' onSubmit={(e) => updateComment(comment.id, textfield, e)}>edit</button>
+                                            <button className='deleteComment' onClick={() => deleteComment(comment.id)}>delete</button>
                                         </form>
                                         : null}
                                 </div>
@@ -95,7 +97,7 @@ return (
             <form onSubmit={userComment}>
                 <textarea className='textArea' value={newComment} onChange={(e) => setNewComment(e.target.value)} cols="30" rows="10"></textarea>
                 <div>
-                    <button type='submit'>Submit</button>
+                    <button className='submitButton' type='submit'>Submit</button>
 
                 </div>
             </form>

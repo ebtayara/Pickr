@@ -49,12 +49,12 @@ const Edit = () => {
     <>
       <form onSubmit={submitHandler}>
         <label className="choose_file">You have plenty of options
-            <input
+            <input className="fileUploadBtn"
             type="file"
             onChange={editImage}
             />
         </label>
-        <button type="submit">Upload a MORE AWESOME pic</button>
+        <button className="uploadBtn" type="submit">Upload a MORE AWESOME pic</button>
         <div>
           <div className="title_container">
             <h1 className="title">

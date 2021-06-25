@@ -31,7 +31,7 @@ const PhotoCard = ({photo, user}) => {
         <div className='btn_container'>
             <button className='edit_btn' onClick={editButton} type="submit">Edit</button>
             <button className='delete_btn' onClick={deleteButton} type="submit">Delete</button>
-            <button className='comment_btn' onClick={commentButton} type="submit">Add Comment</button>
+            <button className='comment_btn' onClick={commentButton} type="submit">Comments</button>
         </div>
     </div>
     )

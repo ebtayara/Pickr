@@ -17,3 +17,12 @@
     border: 2px solid black;
     margin: 10px;
 }
+
+.fileUploadBtn {
+    border-color: rgba(0,0,0,.7);
+    margin: 5px;
+}
+
+.uploadBtn {
+    border-color: rgba(0,0,0,.7);
+}
