@@ -11,7 +11,7 @@ function Comments() {
     const {photoId} = useParams()
     const user = useSelector(state => state.session.user)
     const comments = useSelector(state => state.comments)
-    const [body, setBody] = useState('')
+    const [textfield, setBody] = useState('')
     const [newComment, setNewComment] = useState('')
     const [showForm, setShowForm] = useState(false)
     const [formId, setFormId] = useState(null)
@@ -20,21 +20,21 @@ function Comments() {
         dispatch(getComments(photoId))
     }, [dispatch, photoId]);
 
-    console.log('Look at me!', comments)
+    // console.log('Look at me!', comments)
 
     const userComment = async (e) => {
         e.preventDefault()
         dispatch(createComment({
-            body: newComment,
+            textfield: newComment,
             userId: user.id,
             photoId
         }))
         setNewComment('')
     };
 
-    const updateComment = async (commentId, body, e) => {
+    const updateComment = async (commentId, textfield, e) => {
         e.preventDefault()
-        await dispatch(editComment(body, commentId))
+        await dispatch(editComment(textfield, commentId))
         setBody('')
         setShowForm(false)
     };
@@ -48,7 +48,7 @@ function Comments() {
 
     const openForm = (comment) => {
         setShowForm(true)
-        setBody(comment.body)
+        setBody(comment.textfield)
         setFormId(comment.id)
     };
 
@@ -71,14 +71,14 @@ return (
                     <div>
                         <div>
                             <p>{comment.User?.firstName}</p>
-                            <p>{comment.body}</p>
+                            <p>{comment.textfield}</p>
                             {user.id === comment.userId && (
                                 <div>
                                     <button onClick={() => openForm(comment)}>Edit Comment</button>
                                     {showForm && comment.id === formId ?
-                                        <form onSubmit={(e) => updateComment(comment.id, body, e)} key={comment.id}>
-                                            <input type="text" value={body} onChange={(e) => setBody(e.target.value)} />
-                                            <button type='submit' onSubmit={(e) => updateComment(comment.id, body, e)}></button>
+                                        <form onSubmit={(e) => updateComment(comment.id, textfield, e)} key={comment.id}>
+                                            <input type="text" value={textfield} onChange={(e) => setBody(e.target.value)} />
+                                            <button type='submit' onSubmit={(e) => updateComment(comment.id, textfield, e)}></button>
                                             <button onClick={() => deleteComment(comment.id)}></button>
                                         </form>
                                         : null}

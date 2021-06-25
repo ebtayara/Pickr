@@ -82,10 +82,12 @@ const commentsReducer = (state = {}, action) => {
           return newState
         }
         case AddComment: {
+          newState = {...state}
             newState[action.comment.id] = action.comment
             return newState
         }
         case UpdateComment: {
+          newState = {...state}
             newState[action.comment.id] = action.comment
             return newState
         }

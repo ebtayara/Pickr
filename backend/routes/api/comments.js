@@ -6,10 +6,12 @@ const router = express.Router();
 
 router.post('/:photoId', requireAuth, asyncHandler(async (req, res) => {
   // const {photoId} = req.params
-  const photoId = parsInt(req.params.photoId, 10)
-  const {body, userId} = req.body
+  const photoId = parseInt(req.params.photoId, 10)
+  console.log('************', req.body)
+  const {textfield, userId} = req.body
+  console.log('--------', textfield)
   const newComment = await Comment.create({
-      body,
+      textfield,
       userId,
       photoId,
   })
@@ -21,7 +23,7 @@ router.post('/:photoId', requireAuth, asyncHandler(async (req, res) => {
 
 router.get('/:photoId', asyncHandler(async (req, res) => {
   // const {photoId} = req.params
-  const photoId = parsInt(req.params.photoId, 10)
+  const photoId = parseInt(req.params.photoId, 10)
   const comments = await Comment.findAll({
       where: {photoId},
       include: User
@@ -31,16 +33,16 @@ router.get('/:photoId', asyncHandler(async (req, res) => {
 
 router.put('/:photoId', requireAuth, asyncHandler(async (req, res) => {
   // const {photoId} = req.params
-  const photoId = parsInt(req.params.photoId, 10)
-  const {body} = req.body
+  const photoId = parseInt(req.params.photoId, 10)
+  const {textfield} = req.body
   const comment = await Comment.findOne({where: {id: photoId}})
-  await comment.update({body})
+  await comment.update({textfield})
   return res.json(comment)
 }));
 
 router.delete('/:userId', requireAuth, asyncHandler(async (req, res) => {
   // const {commentId} = req.params
-  const commentId = parsInt(req.params.commentId, 10)
+  const commentId = parseInt(req.params.commentId, 10)
   const comment = await Comment.findByPk(commentId)
   await comment.destroy()
 }));
