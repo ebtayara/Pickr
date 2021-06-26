@@ -92,9 +92,11 @@ const commentsReducer = (state = {}, action) => {
             return newState
         }
         case DeleteComment: {
-          newState = {...state, comment:action.comment}
-            // delete newState[action.comment]
+          newState = {...state}
+            delete newState[action.comment]
             return newState
+          // newState = {...state, comment:action.comment}
+          //   return newState
         }
         default:
             return state
