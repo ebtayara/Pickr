@@ -14,7 +14,12 @@ function Navigation({ isLoaded }){
     <>
     <div className="upload_btn">
         <div>
-            <NavLink to="/upload">Upload</NavLink>
+            <NavLink to="/upload">Photos</NavLink>
+        </div>
+    </div>
+    <div className="album_btn">
+        <div>
+            <NavLink to="/albums">Albums</NavLink>
         </div>
     </div>
         <div>
