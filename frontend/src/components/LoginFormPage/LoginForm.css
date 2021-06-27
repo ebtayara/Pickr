@@ -9,6 +9,9 @@
     padding: 10px;
     border: 2px solid black;
     margin: 10px;
+    height: fit-content;
+    width: 430px;
+    font-family: sans-serif;
 }
 
 .user {

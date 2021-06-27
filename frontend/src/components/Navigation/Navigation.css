@@ -8,10 +8,6 @@
     justify-content: space-around;
 }
 
-btn_container {
-
-}
-
 #profile_btn {
     /* display: flex;
     flex-direction: column;
@@ -69,6 +65,7 @@ btn_container {
     justify-content: right;
     align-self: right;
     align-items: right; */
+    margin-left: 600px;
     color: white;
     font-size: 20px;
     /* height: 40px;
