@@ -16,8 +16,12 @@ textArea {
   margin-bottom: 1px;
 }
 
+.fa-edit:before {
+  content: "\f044";
+}
+
 .editButtonContainer {
-  
+  margin-top: 30px;
 }
 
 .submitButton {

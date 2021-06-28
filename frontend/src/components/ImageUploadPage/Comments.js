@@ -77,7 +77,9 @@ return (
                             {user.id === comment.userId && (
                                 <div>
                                     <div className='editButtonContainer'>
-                                    <button className='editButton' onClick={() => openForm(comment)}>Edit Comment</button>
+                                    <button className='editButton' onClick={() => openForm(comment)}>
+                                        <i class="fas fa-edit"></i>
+                                    </button>
                                     </div>
                                     {showForm && comment.id === formId ?
                                         <form onSubmit={(e) => updateComment(comment.id, textfield, e)} key={comment.id}>
