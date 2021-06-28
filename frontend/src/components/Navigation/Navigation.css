@@ -96,7 +96,7 @@
 
 #footer {
     /* display: flex; */
-    height: 30px;
+    height: 37px;
     position: fixed;
     width: 100%;
     bottom: 0px;
@@ -111,10 +111,14 @@
 #navFooterContainer {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 #github_link {
     padding: 5px;
+}
+
+.gitHub {
+    margin-bottom: 10px;
 }

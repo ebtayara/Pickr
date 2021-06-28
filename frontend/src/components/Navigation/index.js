@@ -49,7 +49,26 @@ function Navigation({ isLoaded }){
     <div id="footer">
         <div id="navFooterContainer">
         Developed by
-        <a href="https://github.com/ebtayara" target="_blank" id="github_link">Ebrahim Tayara</a>
+            <a href="https://github.com/ebtayara" target="_blank" id="github_link">
+                <div class="gitHub">
+                    <i class="fab fa-github"></i>
+                </div>
+            </a>
+            <a href="https://www.linkedin.com/in/ebrahim-tayara-b9b50871/" target="_blank">
+                <div class="linkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/the_ebester/" target="_blank">
+                <div class="insta">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </a>
+            <a href="https://www.facebook.com/ebrahim.s.tayara" target="_blank">
+                <div class="facebook">
+                    <i class="fab fa-facebook"></i>
+                </div>
+            </a>
         </div>
     </div>
     </div>
