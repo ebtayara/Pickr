@@ -11,6 +11,7 @@ import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
 // import HomePage from "./components/HomePage";
 import Comments from "./components/ImageUploadPage/Comments";
+// import Albums from "./components/Albums";
 
 function App() {
   const dispatch = useDispatch();
@@ -42,6 +43,9 @@ function App() {
           <Route path ="/comment/:photoId">
             <Comments />
           </Route>
+          {/* <Route path ="/albums">
+            <Albums />
+          </Route> */}
           {/* <Route path ="/github">
             <GitHubPage />
           </Route> */}
