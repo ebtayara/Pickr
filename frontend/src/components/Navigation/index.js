@@ -12,15 +12,26 @@ function Navigation({ isLoaded }){
     if (sessionUser) {
         sessionLinks = (
     <>
-    <div className="upload_btn">
-        <div>
-            <NavLink to="/upload">Photos</NavLink>
+    <div className="upload_link">
+        <div className = "photos_container">
+            <NavLink to="/upload" className="photos">Photos</NavLink>
         </div>
+
+        {/* <a href="http://localhost:3000/upload" target="_blank">
+                <div className="photos">
+                    <i class="fas fa-photo-video"></i>
+                </div>
+        </a> */}
     </div>
-    <div className="album_btn">
-        <div>
-            <NavLink to="/albums">Albums</NavLink>
+    <div className="album_link">
+        <div className="albums_container">
+            <NavLink to="/albums" className="albums">Albums</NavLink>
         </div>
+        {/* <a href="http://localhost:3000/albums" target="_blank">
+                <div className="albums">
+                    <i class="fad fa-album-collection"></i>
+                </div>
+        </a> */}
     </div>
         <div>
             <ProfileButton id="profile_btn" user={sessionUser} />
@@ -57,22 +68,22 @@ function Navigation({ isLoaded }){
                 </div>
             </a>
             <a href="https://www.linkedin.com/in/ebrahim-tayara-b9b50871/" target="_blank">
-                <div class="linkedIn">
+                <div className="linkedIn">
                     <i class="fab fa-linkedin"></i>
                 </div>
             </a>
             <a href="https://www.instagram.com/the_ebester/" target="_blank">
-                <div class="insta">
+                <div className="insta">
                     <i class="fab fa-instagram"></i>
                 </div>
             </a>
             <a href="https://www.facebook.com/ebrahim.s.tayara" target="_blank">
-                <div class="facebook">
+                <div className="facebook">
                     <i class="fab fa-facebook"></i>
                 </div>
             </a>
+            </div>
         </div>
-    </div>
     </div>
     );
 }

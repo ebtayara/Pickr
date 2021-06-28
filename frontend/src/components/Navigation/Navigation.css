@@ -8,6 +8,26 @@
     justify-content: space-around;
 }
 
+.album_link {
+
+}
+
+.upload_link {
+
+}
+
+.photos{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.albums{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
 #profile_btn {
     /* display: flex;
     flex-direction: column;
