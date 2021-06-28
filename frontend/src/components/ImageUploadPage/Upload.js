@@ -67,7 +67,7 @@ const ImageUpload = () => {
                 </button>
             </div>
         <div>
-        </div>
+      </div>
       </form>
       {Object.values(photos).map(photo =>
         <PhotoCard photo={photo} user={user} newList={newList} Comments={Comments}/>

@@ -1,29 +1,40 @@
 .title {
     color: white;
+    /* background-color: rgba(0,0,0,.5); */
+    width:fit-content;
+    padding: 10px;
 }
 
 .choose_file {
-    color: burlywood;
+    color: white;
+    background-color: black;
+    background-size: 100px;
     margin: 10px;
 }
 
-.title_container {
-    color: white;
-    display: flex;
-    justify-content: center;
-    display: inline-block;
-    justify-content: space-between;
-    background-color: rgba(0, 128, 0, .2);
-    padding: 10px;
-    border: 2px solid black;
-    margin: 10px;
+.fab {
+    font-size: 40px;
+}
+
+.fas {
+    font-size: 25px;
 }
 
 .fileUploadBtn {
-    border-color: rgba(0,0,0,.7);
-    margin: 5px;
+    /* border-color: rgba(0,0,0,.7);
+    margin: 5px; */
+    background-color: rgba(0,0,0,.7);
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin: 10px;
+    width: 230px;
 }
 
 .uploadBtn {
     border-color: rgba(0,0,0,.7);
+}
+
+.uploadBtnContainer {
+    margin-left: 157px;
 }

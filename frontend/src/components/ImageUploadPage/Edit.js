@@ -47,21 +47,30 @@ const Edit = () => {
 
     return (
     <>
+    <div>
+      <h1 className="title">
+          Wrong Angle? No worries <i class="far fa-smile-beam"></i>
+      </h1>
+    </div>
       <form onSubmit={submitHandler}>
-        <label className="choose_file">You have plenty of options
+        <label className="choose_file">
+          <div class="fab fa-aws_container">
+            <i class="fab fa-aws"></i>
+          </div>
             <input className="fileUploadBtn"
             type="file"
             onChange={editImage}
             />
         </label>
-        <button className="uploadBtn" type="submit">Upload a MORE AWESOME pic</button>
+          <div className="uploadBtnContainer">
+            <button className="uploadBtn" type="submit">
+              <div>
+                <i class="fas fa-cloud-upload-alt"></i>
+              </div>
+            </button>
+            </div>
         <div>
-          <div className="title_container">
-            <h1 className="title">
-                Wrong Angle? No worries :)
-            </h1>
-          </div>
-        </div>
+      </div>
       </form>
       <PhotoCard photo={singlePhoto} user={user} newList={newList} />
       {/* {Object.values(photos).map(photo =>
