@@ -39,12 +39,17 @@ function SignupFormPage() {
 };
 
     return (
+<div className="signup_page">
+        <h1 className='greeting'>
+        Don't stop now!
+        </h1>
+        <h2 className='message'>You're only a few steps away.</h2>
     <form onSubmit={handleSubmit}>
         <ul>
             {errors.map((error, idx) => <li key={idx}>{error}</li>)}
         </ul>
-        <label>
-            Email
+        <label className="email">
+            Email:
             <input
                 type="text"
                 value={email}
@@ -52,8 +57,8 @@ function SignupFormPage() {
                 required
         />
         </label>
-        <label>
-            Username
+        <label className="user">
+            Username:
             <input
                 type="text"
                 value={username}
@@ -61,8 +66,8 @@ function SignupFormPage() {
                 required
         />
         </label>
-        <label>
-            Password
+        <label className="password">
+            Password:
             <input
                 type="password"
                 value={password}
@@ -70,8 +75,8 @@ function SignupFormPage() {
                 required
             />
         </label>
-        <label>
-            Confirm Password
+        <label className="confirm_password">
+            Confirm Password:
             <input
                 type="password"
                 value={confirmPassword}
@@ -79,8 +84,9 @@ function SignupFormPage() {
                 required
             />
         </label>
-        <button type="submit">Sign Up</button>
+        <button className="sign_up_btn" type="submit">Sign Up</button>
     </form>
+</div>
     );
 }
 

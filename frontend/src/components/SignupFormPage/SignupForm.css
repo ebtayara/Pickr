@@ -1,0 +1,90 @@
+.signup_title {
+  color: white;
+  display: flex;
+  justify-content: center;
+  display: inline-block;
+  justify-content: space-between;
+  /* width: 100%; */
+  background-color: rgba(0, 128, 0, .2);
+  padding: 10px;
+  border: 2px solid black;
+  margin: 10px;
+  height: fit-content;
+  width: 430px;
+  font-family: sans-serif;
+}
+
+.user {
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.email {
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.user_text{
+
+}
+
+.password {
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.confirm_password{
+  color: red;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.log_in {
+  color: burlywood
+}
+
+.sign_up_btn {
+  background-color: rgba(0,0,0,.7);
+  color: white;
+  font-weight: bold;
+  margin-bottom: 1px;
+}
+
+.form {
+
+}
+
+.signup_page {
+  /* background-image: url('https://www.dogbreedslist.info/uploads/dog-pictures/doberman-pinscher-2.jpg'); */
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  text-align: center;
+  vertical-align: middle;
+}
+
+.greeting {
+  position: center;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 210px;
+  padding: 10px;
+
+}
+
+.message {
+  font-size: 30px;
+  color: white;
+  padding: 20px;
+}
