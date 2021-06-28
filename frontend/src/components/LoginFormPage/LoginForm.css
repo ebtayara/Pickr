@@ -29,3 +29,33 @@
 .form {
 
 }
+
+.login_page {
+    /* background-image: url('https://www.dogbreedslist.info/uploads/dog-pictures/doberman-pinscher-2.jpg'); */
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .greetings {
+    position: center;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 250px;
+
+  }
+
+  .message {
+    font-size: 30px;
+    color: white;
+  }

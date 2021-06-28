@@ -27,6 +27,11 @@ function LoginFormPage() {
     }
 
     return (
+<div className="login_page">
+        <h1 className='greetings'>
+        Let the artistry begin!
+        </h1>
+        <h2 className='message'>Join our community, home to all your pet photos.</h2>
     <form onSubmit={handleSubmit} className="form">
         <ul>
             {errors.map((error, idx) => <li key={idx}>{error}</li>)}
@@ -50,14 +55,15 @@ function LoginFormPage() {
             />
         </label>
         <button type="submit">Log In</button>
-        <div>
+        {/* <div>
             <div className="login_title">
                 <h1>
                 You have an awesome pet you want to show off?!
                 </h1>
             </div>
-        </div>
+        </div> */}
     </form>
+</div>
     );
 }
 

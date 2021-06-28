@@ -1,7 +1,8 @@
 /* TODO Add site wide styles */
 
 body {
-    background-image: url('https://www.petplace.com/static/d4eb1d31d9e22d830a0097e3e8dcdf3d/98569/AdobeStock_142438416.jpg');
+    /* background-image: url('https://www.petplace.com/static/d4eb1d31d9e22d830a0097e3e8dcdf3d/98569/AdobeStock_142438416.jpg'); */
+    background-image: url('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2021%2F03%2F25%2Fdoberman-pinscher-puppy-running-1820158586-2000.jpg');
     height: 100%;
     /* background:grey; */
     /* overflow-y: scroll;

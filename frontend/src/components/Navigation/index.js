@@ -48,7 +48,9 @@ function Navigation({ isLoaded }){
         </div>
     <div id="footer">
         <div id="navFooterContainer">
-        Developed by
+        <div className="developed">
+            Developed by
+        </div>
             <a href="https://github.com/ebtayara" target="_blank" id="github_link">
                 <div class="gitHub">
                     <i class="fab fa-github"></i>
