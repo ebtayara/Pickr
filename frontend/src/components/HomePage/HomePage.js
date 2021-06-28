@@ -1,10 +1,15 @@
 import './HomePage.css';
 
+function HomePage() {
+
 return (
-<div id="footer">
-        <div id="navFooterContainer">
-        Developed by
-        <a href="https://github.com/ebtayara" target="_blank" id="github_link">Ebrahim Tayara</a>
+        <div className="home_page">
+                <h1 className='greetings'>
+                Let the artistry begin!
+                </h1>
+                <h2 className='message'>Join our community, home to all your pet photos.</h2>
         </div>
-</div>
-)
+        )
+}
+
+export default HomePage;

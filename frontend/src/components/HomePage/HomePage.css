@@ -1,20 +1,29 @@
-#footer {
-  /* display: flex; */
-  height: 30px;
-  position: fixed;
-  width: 100%;
-  bottom: 0px;
-  background-color: rgba(0, 0, 0, .3);
-  color: white;
-  font-weight: bold;
+.home_page {
+  background-image: url('https://www.dogbreedslist.info/uploads/dog-pictures/doberman-pinscher-2.jpg');
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
-  padding: 10px;
-  border: 2px solid grey;
+  vertical-align: middle;
 }
 
-#navFooterContainer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.greetings {
+  position: center;
+  font-size: 60px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 250px;
+
+}
+
+.message {
+  font-size: 30px;
+  color: white;
 }
