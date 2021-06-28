@@ -44,7 +44,7 @@ const ImageUpload = () => {
 
     return (
     <div className="wrapper">
-      <div className = "title_container">
+      <div>
         <h1 className="title">
             Show us Whatchu Got!
         </h1>
@@ -60,7 +60,11 @@ const ImageUpload = () => {
             />
         </label>
             <div className="uploadBtnContainer">
-              <button className="uploadBtn" type="submit">Upload</button>
+              <button className="uploadBtn" type="submit">
+                <div>
+                  <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                </button>
             </div>
         <div>
         </div>
