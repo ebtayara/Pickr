@@ -1,36 +1,50 @@
 .upload {
-    color: burlywood;
+    color: white;
+    background-color: black;
+    background-size: 100px;
     margin: 10px;
 }
 
+.fab {
+    font-size: 40px;
+}
+
+/* .fab fa-aws_container {
+    font-size: 40px;
+} */
+
 .uploadBtn {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    border-color: rgba(0,0,0,.7);
+    background-color: rgba(0,0,0,.5);
     color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin: 10px;
 }
 
 .fileUploadBtn {
-    margin: 5px;
-    border-color: rgba(0,0,0,.7);
+    background-color: rgba(0,0,0,.5);
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin: 10px;
+    width: 245px;
+
 }
 
 .title {
     color: white;
+    background-color: rgba(0,0,0,.5);
 }
 
 .title_container {
     color: white;
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
     display: inline-block;
     justify-content: space-between;
-    background-color: rgba(0, 128, 0, .2);
+    /* background-color: rgba(0,0,0,.5); */
+    /* background-color: rgba(0, 128, 0, .2); */
+    background-color: lightcoral;
     padding: 10px;
     border: 2px solid black;
     margin: 10px;
@@ -38,4 +52,8 @@
 
 .wrapper {
     margin-bottom: 50px;
+}
+
+.uploadBtnContainer {
+    margin-left: 110px;
 }

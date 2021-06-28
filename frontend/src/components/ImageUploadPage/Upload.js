@@ -44,20 +44,25 @@ const ImageUpload = () => {
 
     return (
     <div className="wrapper">
+      <div className = "title_container">
+        <h1 className="title">
+            Show us Whatchu Got!
+        </h1>
+      </div>
       <form onSubmit={submitHandler}>
-        <label className ="upload">Upload Image
+        <label className ="upload">
+          <div class="fab fa-aws_container">
+            <i class="fab fa-aws"></i>
+          </div>
             <input className = "fileUploadBtn"
             type="file"
             onChange={updateImage}
             />
         </label>
-        <button className="uploadBtn" type="submit">Upload</button>
+            <div className="uploadBtnContainer">
+              <button className="uploadBtn" type="submit">Upload</button>
+            </div>
         <div>
-          <div className = "title_container">
-            <h1 className="title">
-                Show us Whatchu Got!
-            </h1>
-          </div>
         </div>
       </form>
       {Object.values(photos).map(photo =>
