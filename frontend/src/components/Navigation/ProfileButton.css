@@ -6,6 +6,18 @@
 color: white;
 }
 
-.email {
+.user_email {
 color: white;
+font-weight: bold;
+}
+
+.profile_container {
+  /* display: flex;
+  justify-content: center; */
+}
+
+.logout_btn {
+  background-color: rgba(0,0,0,.7);
+  color: white;
+  font-weight: bold;
 }
