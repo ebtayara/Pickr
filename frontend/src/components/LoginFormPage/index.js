@@ -28,7 +28,7 @@ function LoginFormPage() {
 
     return (
 <div className="login_page">
-        <h1 className='greetings'>
+        <h1 className='greeting'>
         Let the artistry begin!
         </h1>
         <h2 className='message'>Join our community, home to all your pet photos.</h2>
@@ -54,7 +54,7 @@ function LoginFormPage() {
                 required
             />
         </label>
-        <button type="submit">Log In</button>
+        <button className="log_in_btn" type="submit">Log In</button>
         {/* <div>
             <div className="login_title">
                 <h1>
