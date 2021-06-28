@@ -71,11 +71,11 @@ return (
             return (
                 <div key={comment.id} className='commentsContainer'>
                     <div>
-                        <div>
+                        <div className="comment">
                             <p>{comment.User?.firstName}</p>
                             <p>{comment.textfield}</p>
                             {user.id === comment.userId && (
-                                <div>
+                        <div>
                                     <div className='editButtonContainer'>
                                     <button className='editButton' onClick={() => openForm(comment)}>
                                         <i class="fas fa-edit"></i>
