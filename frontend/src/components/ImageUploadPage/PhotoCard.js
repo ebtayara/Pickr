@@ -27,7 +27,7 @@ const PhotoCard = ({photo, user}) => {
 
     return (
     <div className='img_container'>
-        <img className='img' src={photo?.image_url}></img>
+        <img className='img' src={photo?.image_url} alt=""></img>
         <div className='btn_container'>
             <button className='edit_btn' onClick={editButton} type="submit">Edit</button>
             <button className='delete_btn' onClick={deleteButton} type="submit">Delete</button>

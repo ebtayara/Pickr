@@ -54,7 +54,9 @@ function Navigation({ isLoaded }){
                 <NavLink exact to="/" id="home_btn">pickr</NavLink>
             </div>
             <div id="nav_flex_container">
-                {isLoaded && sessionLinks}
+                {/* {isLoaded && sessionLinks} */}
+                <NavLink to="/login" id="log_in_btn">Log In</NavLink>
+                <NavLink to="/signup" id="sign_up_btn">Sign Up</NavLink>
             </div>
         </div>
     <div id="footer">
@@ -62,22 +64,22 @@ function Navigation({ isLoaded }){
         <div className="developed">
             Developed by
         </div>
-            <a href="https://github.com/ebtayara" target="_blank" id="github_link">
+            <a href="https://github.com/ebtayara" target="_blank" id="github_link" rel="noreferrer">
                 <div class="gitHub">
                     <i class="fab fa-github"></i>
                 </div>
             </a>
-            <a href="https://www.linkedin.com/in/ebrahim-tayara-b9b50871/" target="_blank">
+            <a href="https://www.linkedin.com/in/ebrahim-tayara-b9b50871/" target="_blank" rel="noreferrer">
                 <div className="linkedIn">
                     <i class="fab fa-linkedin"></i>
                 </div>
             </a>
-            <a href="https://www.instagram.com/the_ebester/" target="_blank">
+            <a href="https://www.instagram.com/the_ebester/" target="_blank" rel="noreferrer">
                 <div className="insta">
                     <i class="fab fa-instagram"></i>
                 </div>
             </a>
-            <a href="https://www.facebook.com/ebrahim.s.tayara" target="_blank">
+            <a href="https://www.facebook.com/ebrahim.s.tayara" target="_blank" rel="noreferrer">
                 <div className="facebook">
                     <i class="fab fa-facebook"></i>
                 </div>
